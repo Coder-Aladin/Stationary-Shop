@@ -1,14 +1,15 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #f59e0b;
+    --primary-color: #71C9CE;
+    --secondary-color: #A6E3E9;
+    --primary-hover: #5DBBC1;
 
-    --background-color: #ffffff;
-    --surface-color: #f8fafc;
+    --background-color: #E3FDFD;
+    --surface-color: #CBF1F5;
 
-    --text-color: #0f172a;
-    --muted-text-color: #64748b;
+    --text-color: #0F172A;
+    --muted-text-color: #64748B;
 
-    --border-color: #e2e8f0;
+    --border-color: #A6E3E9;
 
     --container-width: 1200px;
 
@@ -53,21 +54,54 @@ img {
     margin-inline: auto;
 }
 
-nav{
-    background-color: var(--primary-color);
-    color: var(--background-color);
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    min-height: 72px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-block: 1rem;
 }
 
-nav .logo {
+.navbar .logo {
+    color: var(--text-color);
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
 }
 
-nav ul {
+.nav-links {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.nav-links a {
+    color: var(--muted-text-color);
+    font-weight: 600;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--primary-hover);
+}
+
+.cart-count {
+    display: inline-grid;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    place-items: center;
+    margin-left: 0.25rem;
+    padding-inline: 0.35rem;
+    border-radius: 999px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 0.8rem;
+    line-height: 1;
 }
